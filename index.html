@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- Added lang="ar" and dir="rtl" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة البحث عن الحرف</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link the manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Optional: Theme color for Safari on iOS -->
+    <meta name="theme-color" content="#007bff">
+</head>
+
+<body>
+
+
+
+    <div class="game-area">
+        <!-- ... rest of your game area content ... -->
+         <div class="target-letter-container">
+             <!-- Changed paragraph text -->
+            <p>ابحث عن الكلمات التي تحتوي على الحرف:</p>
+            <div id="target-letter">?</div>
+        </div>
+
+        <div id="word-options" class="word-options-container">
+            <!-- Word buttons will be added here by JavaScript -->
+        </div>
+
+         <!-- Changed button text -->
+        <button id="check-button">تحقق من الإجابة</button>
+         <!-- Changed button text -->
+        <button id="new-game-button">جولة جديدة</button>
+
+        <div id="feedback" class="feedback-message"></div>
+    </div>
+
+    <!-- Add Audio Elements Here -->
+    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+    <!-- Make sure correct.mp3 and wrong.mp3 are in the same folder -->
+
+    <script src="script.js"></script>
+        <!-- ... your audio elements and script.js link ... -->
+        <script src="script.js"></script>
+
+        <!-- Add Service Worker Registration -->
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('./sw.js') // Path to your service worker file
+                .then(registration => {
+                  console.log('Service Worker registered successfully:', registration.scope);
+                })
+                .catch(error => {
+                  console.error('Service Worker registration failed:', error);
+                });
+            });
+          }
+    </script>
+
+    
+</body>
+</html>

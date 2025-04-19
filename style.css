@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.game-area {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.target-letter-container p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#target-letter {
+    font-size: 4em;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    min-width: 60px; /* Ensure some width even for narrow letters */
+}
+
+.word-options-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: center;
+    gap: 15px; /* Spacing between buttons */
+    margin-bottom: 25px;
+}
+
+.word-button {
+    padding: 15px 25px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s, border-color 0.2s;
+    min-width: 120px; /* Give buttons a minimum width */
+}
+
+.word-button:hover {
+    background-color: #e9ecef;
+    border-color: #aaa;
+}
+
+.word-button.selected {
+    background-color: #a0d0ff; /* Light blue when selected */
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+button { /* Style for Check and New Round buttons */
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green */
+    color: rgb(180, 42, 42);
+    margin: 10px 5px 0 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#new-game-button {
+    background-color: #ffc107; /* Yellow */
+    color: #333;
+}
+
+.feedback-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 1.5em; /* Reserve space for the message */
+}
+
+.feedback-message.correct {
+    color: #28a745; /* Green */
+}
+
+.feedback-message.incorrect {
+    color: #dc3545; /* Red */
+}
+body {
+    /* Add this line - list common fonts that support Arabic */
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    /* ... keep your existing styles ... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* You might also apply it specifically */
+#target-letter, .word-button {
+     font-family: 'Tahoma', 'Arial', sans-serif; /* Example */
+}
