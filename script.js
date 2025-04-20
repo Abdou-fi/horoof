@@ -10,7 +10,7 @@ const wordList = [
 ]; // أضف المزيد من الكلمات المناسبة للعمر!
 
 // Arabic alphabet - Updated to include common Alef forms explicitly
-const alphabet = "اأإآبتثجحخدذرزسشصضطظعغفقكلمنهويىة"; // Arabic letters
+const alphabet = "اأبتثجحخدذرزسشصضطظعغفقكلمنهوية"; // Arabic letters
 const numberOfWords = 4;
 
 // --- DOM Elements ---
