@@ -30,10 +30,10 @@ let selectedWords = [];
 
 // --- Functions ---
 
-// Helper function to check if a word contains a letter, treating specified Alef/Hamza forms as equivalent
+// Helper function to check if a word contains a letter, treating specified Alef forms as equivalent
 function arabicIncludes(word, letter) {
-    // Define the set of equivalent forms
-    const equivalentForms = ['أ', 'ا', 'ى', 'إ', 'ء', 'آ']; // Added ء and آ
+    // Define the set of equivalent forms (Removed إ, آ, ء. Note: ئ was not previously included)
+    const equivalentForms = ['أ', 'ا']; // Only Alef, Alef with Hamza Above
 
     // Check if the target letter is one of the equivalent forms
     if (equivalentForms.includes(letter)) {
