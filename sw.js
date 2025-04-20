@@ -6,11 +6,12 @@ const urlsToCache = [
   'style.css',
   'script.js',
   'manifest.json',
-  'correct.mp3', // Add your sound files
+  'correct.mp3',
   'wrong.mp3',
-  'icons/icon-192x192.png', // Add your icon files
-  'icons/icon-512x512.png'
-  // Add paths to any other essential assets (like other icons)
+  'icons/icon-192x192.png',
+  'icons/icon-512x512.png',
+  'fonts/Amiri-Regular.ttf' // <-- Add the path to your font file
+  // Add paths to any other essential assets
 ];
 
 // Install event: Cache the files
