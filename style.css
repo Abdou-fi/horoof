@@ -1,115 +1,64 @@
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <!-- Added lang="ar" and dir="rtl" -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة البحث عن الحرف</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link the manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Optional: Theme color for Safari on iOS -->
+    <meta name="theme-color" content="#007bff">
+</head>
 
-.game-area {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+<body>
 
-.target-letter-container p {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
 
-#target-letter {
-    font-size: 4em;
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 20px;
-    border: 2px solid #007bff;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    min-width: 60px; /* Ensure some width even for narrow letters */
-}
 
-.word-options-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    justify-content: center;
-    gap: 15px; /* Spacing between buttons */
-    margin-bottom: 25px;
-}
+    <div class="game-area">
+        <!-- ... rest of your game area content ... -->
+         <div class="target-letter-container">
+             <!-- Changed paragraph text -->
+            <p>ابحث عن الكلمات التي تحتوي على الحرف:</p>
+            <div id="target-letter">?</div>
+        </div>
 
-.word-button {
-    padding: 15px 25px;
-    font-size: 1.5em;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    transition: background-color 0.2s, border-color 0.2s;
-    min-width: 120px; /* Give buttons a minimum width */
-}
+        <div id="word-options" class="word-options-container">
+            <!-- Word buttons will be added here by JavaScript -->
+        </div>
 
-.word-button:hover {
-    background-color: #e9ecef;
-    border-color: #aaa;
-}
+         <!-- Changed button text -->
+        <button id="check-button">تحقق من الإجابة</button>
+         <!-- Changed button text -->
+        <button id="new-game-button">جولة جديدة</button>
 
-.word-button.selected {
-    background-color: #a0d0ff; /* Light blue when selected */
-    border-color: #007bff;
-    font-weight: bold;
-}
+        <div id="feedback" class="feedback-message"></div>
+    </div>
 
-button { /* Style for Check and New Round buttons */
-    padding: 10px 20px;
-    font-size: 1.1em;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745; /* Green */
-    color: rgb(180, 42, 42);
-    margin: 10px 5px 0 5px;
-    transition: background-color 0.2s;
-}
+    <!-- Add Audio Elements Here -->
+    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+    <!-- Make sure correct.mp3 and wrong.mp3 are in the same folder -->
 
-button:hover {
-    opacity: 0.9;
-}
+    <script src="script.js"></script>
+        <!-- ... your audio elements and script.js link ... -->
+        <script src="script.js"></script>
 
-#new-game-button {
-    background-color: #ffc107; /* Yellow */
-    color: #333;
-}
+        <!-- Add Service Worker Registration -->
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('./sw.js') // Path to your service worker file
+                .then(registration => {
+                  console.log('Service Worker registered successfully:', registration.scope);
+                })
+                .catch(error => {
+                  console.error('Service Worker registration failed:', error);
+                });
+            });
+          }
+    </script>
 
-.feedback-message {
-    margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    min-height: 1.5em; /* Reserve space for the message */
-}
-
-.feedback-message.correct {
-    color: #28a745; /* Green */
-}
-
-.feedback-message.incorrect {
-    color: #dc3545; /* Red */
-}
-body {
-    /* Add this line - list common fonts that support Arabic */
-    font-family: 'Tahoma', 'Arial', sans-serif;
-    /* ... keep your existing styles ... */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-
-/* You might also apply it specifically */
-#target-letter, .word-button {
-     font-family: 'Tahoma', 'Arial', sans-serif; /* Example */
-}
+    
+</body>
+</html>

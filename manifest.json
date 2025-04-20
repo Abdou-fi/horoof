@@ -1,24 +1,23 @@
 {
-    "name": "???? ????? ?? ?????", // Full name of your app
-    "short_name": "???? ?????", // Shorter name (e.g., under the icon)
-    "description": "A simple game to find Arabic letters in words.",
-    "start_url": ".", // Starts from the index.html directory
-    "display": "standalone", // Makes it look like a native app (no browser UI)
-    "background_color": "#f0f0f0", // Background color during launch
-    "theme_color": "#007bff", // Theme color for the app's toolbar
-    "orientation": "portrait", // Optional: Lock orientation
-    "icons": [
-      {
-        "src": "icons/icon-192x192.png", // Path to a 192x192 icon
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "icons/icon-512x512.png", // Path to a 512x512 icon
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-      // Add more icon sizes if needed (e.g., 72x72, 96x96, 128x128, 144x144)
-    ]
-  }
-  
+  "name": "لعبة البحث عن الحرف", // Full name of your app
+  "short_name": "لعبة الحرف", // Shorter name (e.g., under the icon)
+  "description": "A simple game to find Arabic letters in words.",
+  "start_url": ".", // Starts from the index.html directory
+  "display": "standalone", // Makes it look like a native app (no browser UI)
+  "background_color": "#f0f0f0", // Background color during launch
+  "theme_color": "#007bff", // Theme color for the app's toolbar
+  "orientation": "portrait", // Optional: Lock orientation
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png", // Path to a 192x192 icon
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png", // Path to a 512x512 icon
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+    // Add more icon sizes if needed (e.g., 72x72, 96x96, 128x128, 144x144)
+  ]
+}
